@@ -16,7 +16,9 @@
     <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
     <script src="https://kit.fontawesome.com/a658a7b479.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.5.0.js" integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <link rel="icon" type="image/png" href="../docs/logo.png">
     <link rel="stylesheet" type="text/css" href="../static/mystyle.css">
     <script src="./js/main.js"></script>
@@ -26,21 +28,21 @@
 <body>
     <div id="loading"></div>
 
-    <nav class="navbar">
+    <nav class="navbar" style="background-color: #000000; color: black;">
         <span class="navbar-toggle" id="js-navbar-toggle">
             <button class="togglebtn" onClick={this.buttonclicked}> <i class="fas fa-bars"></i></button>
         </span>
-        <h5><a href="../index.html" class="logo">Sign Language <span>Translator</span></a></h5>
+        <h5><a href="../index.html" class="logo">Gesture <span>Translator</span></a></h5>
         <ul class="main-nav" id="js-menu">
             <li>
-                <a href="../index.html" class="nav-links">Tutorials</a>
+                <a href="../Tutorial.html" class="nav-links">Tutorials</a>
             </li>
             <li>
                 <a href="./Training.html" class="nav-links orange">Training</a>
             </li>
 
             <li>
-                <a href="Model.html" class="nav-links">Test Your Skill</a>
+                <a href="./Model.html" class="nav-links">Test Your Skill</a>
             </li>
 
             <li>
@@ -51,14 +53,14 @@
     </nav>
 
 
-    <div class="alert alert-success">
+    <!-- <div class="alert alert-success">
         Please train atleast 30 images for each class and,for more information
         <a href="https://youtu.be/TQHRHdGpT70" style="color: green;">click
             here </a>
-    </div>
+    </div> -->
 
 
-    <h1 class="myheading"><i class="fab fa-joomla"></i> Train Your Own Model</h1><br>
+    <h1 class="myheading" style="padding-top: 2rem;font-family: 'Roboto Mono', monospace;">Train Your Own Model</h1><br>
 
 
     <div class="row">
@@ -72,7 +74,7 @@
                 <video autoplay playsinline muted id="webcam" class="cam"></video>
 
                 <div class="grey-bg">
-                    <div class="row text-center">
+                    <div class="row text-center" style="color: black;">
                         <h3>Prediction: <span id="predictions"></span></h3>
                         <h3>Probability : <span id="confidence"></span> %</h3>
                     </div>
@@ -89,7 +91,7 @@
         <div class="column flex-2-container">
             <!-- <AddContainer></AddContainer> -->
             <div>
-                <div class="model">
+                <div class="model" style="background-color: #EEF1F2;">
                     <button class="dark btn-lg btn-shadow " id="save_button">Download Model <i
                             class="fas fa-download"></i></button>
                     <input id="load_button" class="fileinputs" type="file" accept=".json">
